@@ -1,6 +1,9 @@
 import React from 'react';
 import './home.css'
 import manEating from '../../assessts/pizza1.png'
+import illustration1 from '../../assessts/deliver1.jpg'
+import illustration2 from '../../assessts/delivery2.jpg'
+import illustration3 from '../../assessts/delivery3.jpg'
 
 const Home = () => {
   return (
