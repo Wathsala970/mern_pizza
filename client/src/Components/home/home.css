@@ -83,5 +83,6 @@
 .manEatingImg{
     height: 85%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    margin: 100px;
 }
