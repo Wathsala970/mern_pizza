@@ -13,7 +13,9 @@ li{
    line-height: 10vh;
    height: 10vh;
    box-shadow: rgb(50,50,93,0.23)0 30px 30px -20px;
-
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .logo{
    font-size: 30px;
@@ -23,13 +25,7 @@ li{
    justify-content: flex-end;
    width: 75%;
 }
-.container{
-   display:flex;
-   justify-content: space-between;
-   align-items: center;
-   max-width: 90%;
-   margin: auto;
-}
+
 .nav-links li{
    color: black;
    font-size: 20px;
@@ -56,5 +52,41 @@ li{
 .button{
    border: none;
    background: none;
-   font-size: 20px;
+   font-size: 30px;
+}
+.mobile-menu-icon{
+   display: none;
+}
+@media (max-width:768px) {
+  
+   .nav-links{
+      display: none;
+   }
+   .nav-links-mobile{
+      position: absolute;
+      display: block;
+      list-style: none;
+      box-shadow: rgb(50,50,93,0.23)0 30px 30px -20px;
+      left: 0;
+      top: 10%;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      background-color: white;
+   }
+   ul li{
+      padding: 32px;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      text-align: center;
+
+   }
+   .mobile-menu-icon{
+      position: absolute;
+      display: block;
+      right: 20px;
+   }
+   .hero h1{
+      font-size: 50px;
+   }
+
 }
