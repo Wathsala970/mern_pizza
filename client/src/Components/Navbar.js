@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import { BsCart } from 'react-icons/bs'
-import {FaBars} from 'react-icons/fa'
-import {ImCross} from 'react-icons/im'
+import { FaBars } from 'react-icons/fa'
+import { ImCross } from 'react-icons/im'
 
 
 const Navbar = () => {
@@ -13,26 +13,27 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar">
-               
-                    <h3 className="logo">YUMMY PIZZA</h3>
 
-                    <ul className={Mobile? "nav-links-mobile" :"nav-links" } onclick={()=> setMobile(false)}>
-                        <Link to='/'><li>Home</li></Link>
-                        <Link to='/menu'><li>Menu</li></Link>
-                        <Link to='/login'><li>Login</li></Link>
-                        <Link to='/cart'><li>
-                            <button className='cartIcon'>
-                                <BsCart />
-                            </button>
-                        </li></Link>
-                    </ul>
-                    <button className='mobile-menu-icon' onClick={()=>setMobile(!Mobile)}>
-                             {Mobile? <ImCross/> :  <FaBars />}   
-                               
-                    </button>
-              
+                <h3 className="logo">YUMMY PIZZA</h3>
+
+                <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onclick={() => setMobile(false)}>
+                    <Link to='/'><li>Home</li></Link>
+                    <Link to='/menu'><li>Menu</li></Link>
+                    <Link to='/login'><li>Login</li></Link>
+                    <Link to='/cart'><li>
+                        <button className='cartIcon'>
+                            <BsCart />
+                        </button>
+                    </li></Link>
+                </ul>
+                <button className='mobile-menu-icon' onClick={() => setMobile(!Mobile)}>
+                    {Mobile ? <ImCross /> : <FaBars />}
+
+                </button>
+
             </nav>
         </div>
+
 
     )
 }
