@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
 import { BsCart } from 'react-icons/bs'
+import {FaBars} from 'react-icons/fa'
 
 
 const Navbar = () => {
@@ -22,7 +23,9 @@ const Navbar = () => {
                             </button>
                         </li></Link>
                     </ul>
-
+                    <button className='mobile-menu-icon'>
+                                <FaBars />
+                            </button>
                 </div>
             </nav>
         </div>
