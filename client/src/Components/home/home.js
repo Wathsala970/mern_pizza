@@ -1,9 +1,15 @@
 import React from 'react';
 import './home.css'
+import './section3.css'
 import manEating from '../../assessts/pizza1.png'
 import illustration1 from '../../assessts/delivery1.jpg'
 import illustration2 from '../../assessts/delivery2.jpeg'
 import illustration3 from '../../assessts/delivery3.jpg'
+import order from '../../assessts/order.jpg'
+import { AiFillFacebook } from 'react-icons/ai'
+import { AiFillInstagram } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs'
+
 
 const Home = () => {
   return (
@@ -59,38 +65,55 @@ const Home = () => {
               <div className='titles'>
                 <span className='deliverysubtitle'>Get our latest offer</span>
                 <h2 className='deliveriTitle'>Newsletter</h2>
-              </div>
-              <div className='col'>
-                <h3 className='title1'>Working Days</h3>
-                <ul className='list'>
-                  <li>Monday - Friday</li>
-                  <li className='workingTime'>08:00 - 22.00</li>
-                  <li>Saturday</li>
-                  <li className='eorkingTime'>08:00 - 20.00</li>
-                </ul>
-              </div>
-              <div className='col'>
-                <h3 className='title1'>Newsletter</h3>
-                <ul className='list'>
-                  <li>Subscribe to our newsletter</li>
-                  <li>Receive the latest meals</li>
-                  <li>Got the menu with promos</li>
-                  <li>Everithing weekly!</li>
-                </ul>
-              </div>
-              <div className='col'>
-                <h3 className='title1'>Social Media</h3>
-                <ul className='list'>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li ></li>
-                </ul>
+                <img src={order} alt="" className="order1"></img>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section>
+        <div className='container1'>
+          <div className="wrapper1">
+            <div className='col'>
+              <h3 className='title1'>Working Days</h3>
+              <ul className='list'>
+                <li>Monday - Friday</li>
+                <li className='workingTime'>08:00 - 22.00</li>
+                <li>Saturday</li>
+                <li className='workingTime'>08:00 - 20.00</li>
+              </ul>
+            </div>
+            <div className='col'>
+              <h3 className='title1'>Newsletter</h3>
+              <ul className='list'>
+                <li>Subscribe to our newsletter</li>
+                <li>Receive the latest meals</li>
+                <li>Got the menu with promos</li>
+                <li>Everithing weekly!</li>
+              </ul>
+            </div>
+            <div className='col'>
+              <h3 className='title1'>Social Media</h3>
+              <ul className='list'>
+                <li><button className='socialmedia'>
+                  <AiFillFacebook /></button>
+                </li>
+                <li><button className='socialmedia' >
+                  <AiFillInstagram />
+                </button>
+                </li>
+                <li><button className='socialmedia' >
+                  <BsTwitter />
+                </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className='footer'>
+        <div className='footer'></div>
+      </section> */}
     </section>
   )
 
