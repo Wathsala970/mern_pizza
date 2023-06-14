@@ -9,3 +9,16 @@
 .flex-container{
     display: flex;
 }
+.btn{
+    background-color: red !important;
+    color: white !important;
+    margin-top: 10px;
+}
+.title1{
+    font-size: 18px !important;
+    margin-top: 25px;
+}
+.form-control{
+    box-shadow: none !important;
+    border-color: black !important;
+}
