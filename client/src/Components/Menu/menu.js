@@ -1,11 +1,20 @@
 import React from 'react';
+import menu from '../Menu/menu.json';
+import Pizza from '../Menu/pizza';
+import './menu.css';
 
-const Menu =() =>{
+export default function Menu(){
   return(
-    <section className='hero'>
-      <h1>hello menu page</h1>
-    </section>
+      <div>
+          <div className='row'>
+            {menu.map(pizza=>{
+              return <div className='col-md-4'>
+                <div>
+                  <Pizza pizza={pizza}/>
+                </div>
+              </div>
+            })}
+          </div>
+      </div>
   )
-    
 }
-export default Menu
