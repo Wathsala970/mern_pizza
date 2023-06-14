@@ -6,7 +6,7 @@ const router = express.Router();
 const menu = [
     {
         name : "PEPPER BARBECUE & ONION",
-        varients : ["Small","Medium","Large"],
+        varients : ["None","Small","Medium","Large"],
         price : [{"Small": 999,
         "Medium":1849,
         "Large": 3399} ],
