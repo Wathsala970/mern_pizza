@@ -16,8 +16,16 @@ export default function Pizza({ pizza }) {
                     </select>
                 </div>
                 <div className="w-100">
-                    <p>Quentity</p>
+                    <p>Quantity</p>
+                    <select>
+                        {[...Array(10).keys()].map((x , i)=>{
+                            return <option value={i+1}>{i+1}</option>
+                        })}
+                    </select>
                 </div>
+            </div>
+            <div>
+                
             </div>
         </div>
     )
