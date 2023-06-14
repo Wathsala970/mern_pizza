@@ -1,31 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 export default function Pizza({ pizza }) {
+    const [quantity, setQuantity] = useState(0)
+    const [varient, setVarient] = useState('none')
+
     return (
-        <div className="container">
+        <div style={{margin: '70px'}} className="shadow-lg p-3 mb-5 bg-white rounded">
             <h1 className="title">{pizza.name}</h1>
             <img src={pizza.image} className="img-fluid" />
             <div className="flex-container">
-                <div className="w-100">
+                <div className="w-100 m-1">
                     <p>Varients</p>
-                    <select>
-                        {pizza.varients.map(varient=>{
-                            return<option value={varient}>{varient}</option>
+                    <select className='form-control' value={varient} onChange={(e) => { setVarient(e.target.value) }}>
+                        {pizza.varients.map(varient => {
+                            return <option value={varient}>{varient}</option>
                         })}
                     </select>
                 </div>
-                <div className="w-100">
+                <div className="w-100 m-1">
                     <p>Quantity</p>
-                    <select>
-                        {[...Array(10).keys()].map((x , i)=>{
-                            return <option value={i+1}>{i+1}</option>
+                    <select className='form-control' value={quantity} onChange={(e) => { setQuantity(e.target.value) }}>
+                        {[...Array(11).keys()].map((price, i) => {
+                            return <option value={i + 0}>{i + 0}</option>
                         })}
                     </select>
                 </div>
             </div>
-            <div>
-                
+            <div className="flex-container ">
+                <div className="w-100 m-1">
+                    <h1 className="title1">Price : {pizza.price[0][varient] * quantity} Rs/=</h1>
+                    {/* <p>Please select one varient and then you can see price</p> */}
+                </div>
+                <div className="w-100 m-1">
+                    <button className="btn">ADD TO CART</button>
+                </div>
+
             </div>
         </div>
     )
