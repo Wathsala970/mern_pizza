@@ -2,6 +2,7 @@
     {
         "name": "PEPPER BARBECUE & ONION",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
@@ -20,6 +21,7 @@
     {
         "name": "Hot Chili Chicken ",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
@@ -38,6 +40,7 @@
     {
         "name": "Seafood Hawaiian",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
@@ -56,6 +59,7 @@
     {
         "name": "Simply Cheese",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
@@ -74,6 +78,7 @@
     {
         "name": "Sri Lankan Spicy Veg",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
@@ -92,6 +97,7 @@
     {
         "name": "Garden Fresh Delight",
         "varients": [
+            "None",
             "Small",
             "Medium",
             "Large"
