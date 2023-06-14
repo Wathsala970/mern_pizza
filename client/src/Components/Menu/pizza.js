@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-
+import {Modal} from 'react-bootstrap';
 
 export default function Pizza({ pizza }) {
     const [quantity, setQuantity] = useState(0)
     const [varient, setVarient] = useState('none')
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
-        <div style={{margin: '70px'}} className="shadow-lg p-3 mb-5 bg-white rounded">
+        <div style={{ margin: '70px' }} className="shadow-lg p-3 mb-5 bg-white rounded">
+            <div onClick={handleShow}>
             <h1 className="title">{pizza.name}</h1>
             <img src={pizza.image} className="img-fluid" />
+            </div>
             <div className="flex-container">
                 <div className="w-100 m-1">
                     <p>Varients</p>
@@ -37,6 +43,21 @@ export default function Pizza({ pizza }) {
                 </div>
 
             </div>
+            <Modal show={show}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{pizza.name}</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                    <img src={pizza.image} style={{height: '200px !important', width:'200px'}}/>
+                    <p>{pizza.description}</p>
+                </Modal.Body>
+
+                <Modal.Footer>
+                    <button className="btn" onClick={handleClose}>CLOSE</button>
+                    
+                </Modal.Footer>
+            </Modal>
         </div>
     )
 }
