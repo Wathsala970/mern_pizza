@@ -17,7 +17,7 @@ const Home = () => {
       <section style={{ height: '80vh' }} id="home" className="container">
         <div className="wrapper">
           <div className="left">
-            <h2 className="tittle">Do you crave delicious food</h2>
+            <h2 className="tittle">Do you crave delicious food !</h2>
             <p className="firstmsg">But going out to take <span> food costs time....</span></p>
             <p className="secondmsg">Why not order<span> pizza</span> or something <br /><span>delicious</span>from our restaurant</p>
             <p className="desc">Our restaurant always puts the client above.
@@ -43,7 +43,7 @@ const Home = () => {
               <div className='deliveryInfos'>
                 <div className='deliveryInfo'>
                   <img src={illustration1} alt='' className='firstImg' />
-                  <h3>Our delivery guy is always on time</h3>
+                  <h3>Our delivery guys is always on time</h3>
                 </div>
                 <div className='deliveryInfo'>
                   <img src={illustration2} alt='' className='secondImg' />
