@@ -35,7 +35,7 @@ export default function Pizza({ pizza }) {
             </div>
             <div className="flex-container ">
                 <div className="w-100 m-1">
-                    <h1 className="title1">Price : {pizza.price[0][varient] * quantity} Rs/=</h1>
+                    <h1 className="title1">Price : {pizza.price[0][varient] * quantity}.00 Rs/=</h1>
                     {/* <p>Please select one varient and then you can see price</p> */}
                 </div>
                 <div className="w-100 m-1">
