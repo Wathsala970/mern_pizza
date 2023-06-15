@@ -10,7 +10,7 @@ const menu = [
         price : [{"Small": 999,
         "Medium":1849,
         "Large": 3399} ],
-        catogary : "none-veg",
+        category : "none-veg",
         image : "https://www.dominos.co.in/files/items/Pepper_Barbeque_&_Onion.jpg",
         description: "Pepper Barbecue Chicken I Onion"
     },
