@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {Modal} from 'react-bootstrap';
+import { useDispatch } from "react-redux";
+import { addToCart } from "../actions/cartActions";
 
 export default function Pizza({ pizza }) {
     const [quantity, setQuantity] = useState(0)
@@ -8,6 +10,12 @@ export default function Pizza({ pizza }) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const dispatch = useDispatch()
+    function addtocart()
+    {
+        dispatch(addToCart(pizza , quantity , varient))
+    }
 
     return (
         <div  className="shadow-lg p-3 mb-5 bg-white rounded">
