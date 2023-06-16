@@ -5,9 +5,11 @@ import './navbar.css'
 import { BsCart } from 'react-icons/bs'
 import { FaBars } from 'react-icons/fa'
 import { ImCross } from 'react-icons/im'
+import {useSelector} from 'react-redux';
 
+export default function Navbar(){
 
-const Navbar = () => {
+    const cartstate = useSelector(state => state.CartReducer)
     const [Mobile, setMobile] = useState(false)
 
     return (
@@ -22,7 +24,7 @@ const Navbar = () => {
                     <Link to='/login'><li>Login</li></Link>
                     <Link to='/cart'><li>
                         <button className='cartIcon'>
-                            <BsCart />
+                            <BsCart/> {cartstate.cartItems.length}
                         </button>
                     </li></Link>
                 </ul>
@@ -37,4 +39,3 @@ const Navbar = () => {
 
     )
 }
-export default Navbar
