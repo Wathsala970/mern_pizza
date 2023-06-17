@@ -7,6 +7,7 @@ import { FaBars } from 'react-icons/fa'
 import { ImCross } from 'react-icons/im'
 import {useSelector} from 'react-redux';
 
+
 export default function Navbar(){
 
     const cartstate = useSelector(state => state.CartReducer)
@@ -16,7 +17,7 @@ export default function Navbar(){
         <div>
             <nav className="navbar">
 
-                <h3 className="logo">YUMMY PIZZA</h3>
+                <a className="navbar-brand" href='/'>YUMMY PIZZA</a>
 
                 <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onclick={() => setMobile(false)}>
                     <Link to='/'><li>Home</li></Link>
