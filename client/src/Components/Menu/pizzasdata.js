@@ -2,7 +2,6 @@ const pizzas = [
     {
         name: "PEPPER BARBECUE & ONION",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -21,7 +20,6 @@ const pizzas = [
     {
         name: "Hot Chili Chicken ",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -40,7 +38,6 @@ const pizzas = [
     {
         name: "Seafood Hawaiian",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -59,7 +56,6 @@ const pizzas = [
     {
         name: "Simply Cheese",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -78,7 +74,6 @@ const pizzas = [
     {
         name: "Sri Lankan Spicy Veg",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -97,7 +92,6 @@ const pizzas = [
     {
         name: "Garden Fresh Delight",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -116,7 +110,6 @@ const pizzas = [
     {
         name: "Roast Chicken",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -135,7 +128,6 @@ const pizzas = [
     {
         name: "Devilled Fish",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
@@ -154,7 +146,6 @@ const pizzas = [
     {
         name: "Chicken Ham and Cheese",
         varients: [
-            "None",
             "Small",
             "Medium",
             "Large"
