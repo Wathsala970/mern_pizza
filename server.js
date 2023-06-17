@@ -7,22 +7,16 @@ const app = express();
 app.use(express.json());
 
 const pizzasRoute = require('./server/routes/pizzaRaoutes')
+const userRoute = require('./server/routes/userRoutes')
 
 app.use('/api/pizzas/', pizzasRoute)
+app.use('/api/users/', userRoute)
 
 app.get("/", (req,res)=>{
     res.send("server is working " + port);
 });
 
-// app.get('/getpizzas', async (req,res)=>{
-//     try {
-//         const pizzas = await Pizza.find({});
-//         res.send(pizzas)
-//     } catch (error) {
-//         console.error(error);
-//         res.status(500).send("An error occurred");
-//     }
-// });
+
 
 app.use('/menu', menuRoutes)
 const port = process.env.PORT || 8000;
