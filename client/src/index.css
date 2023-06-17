@@ -34,3 +34,12 @@ code {
 .fa-trash{
   color: red;
 }
+.input{
+  margin-top: 10px !important;
+  box-shadow: none !important;
+  
+}
+.form-control{
+  margin-bottom: 10px !important;
+  padding-bottom: 10px;
+}
