@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {Modal} from 'react-bootstrap';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../actions/cartActions";
 
 export default function Pizza({ pizza }) {
-    const [quantity, setQuantity] = useState(0)
-    const [varient, setVarient] = useState('none')
+    const [quantity, setQuantity] = useState(1)
+    const [varient, setVarient] = useState('Small')
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -35,8 +35,8 @@ export default function Pizza({ pizza }) {
                 <div className="w-100 m-1">
                     <p>Quantity</p>
                     <select className='form-control' value={quantity} onChange={(e) => { setQuantity(e.target.value) }}>
-                        {[...Array(11).keys()].map((price, i) => {
-                            return <option value={i + 0}>{i + 0}</option>
+                        {[...Array(10).keys()].map((price, i) => {
+                            return <option value={i + 1}>{i + 1}</option>
                         })}
                     </select>
                 </div>
@@ -44,7 +44,6 @@ export default function Pizza({ pizza }) {
             <div className="flex-container ">
                 <div className="w-100 m-1">
                     <h1 className="title1">Price : {pizza.price[0][varient] * quantity} Rs/=</h1>
-                    {/* <p>Please select one varient and then you can see price</p> */}
                 </div>
                 <div className="w-100 m-1">
                     <button className="btn" onClick={addtocart}>ADD TO CART</button>
