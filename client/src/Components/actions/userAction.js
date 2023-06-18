@@ -23,7 +23,7 @@ export const loginUser = (user)=> async dispatch=>{
         dispatch({type: 'USER_LOGIN_SUCCES', payload: response.data})
         localStorage.setItem('currentUser', JSON.stringify(response.data))
         // alert('succes')
-        window.location.href='/'
+        window.location.href='/menu'
     } catch (error) {
         dispatch({type: 'USER_LOGIN_FAILED' , payload: error})
         // alert('Email or Password Invalid')
@@ -33,5 +33,5 @@ export const loginUser = (user)=> async dispatch=>{
 export const logoutUser = () =>dispatch=>{
 
     localStorage.removeItem('currentUser')
-    window.location.href('/home')
+    window.location.href('/')
 }
