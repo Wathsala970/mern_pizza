@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllPizzas } from '../actions/pizzaActions'
 import Pizza from '../Menu/pizza';
 import './menu.css';
+import Loading from '../loading';
+import Error from '../error';
 
 export default function Menu() {
   const dispatch = useDispatch()
@@ -19,9 +21,9 @@ export default function Menu() {
       <div className='row justify-content-center'>
 
         {loading ? (
-        <h1 className='title2 m-4'>Loading....</h1>
+        <Loading />
         ) : error ? (
-        <h1 className='title2 m-3 '>Something went wrong</h1>
+        <Error error= 'Something went wrong'/>
         ) : (
         pizzas.map(pizza => {
           return (
