@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {loginUser } from '../actions/userAction';
+import Loading from '../loading'
+import Error from '../error'
 
 
 export default function Login(){
 
     const [email, setemail] = useState('');
     const [password, setpassword] = useState('');
+    const loginuserstate = useSelector(state=> state.loginUserReducer)
+    const {loading, error} = loginuserstate
     const dispatch = useDispatch()
 
     
@@ -18,7 +22,7 @@ export default function Login(){
     useEffect(()=>{
         if (localStorage.getItem('currentUser'))
         {
-            window.location.href='/'
+            window.location.href='/menu'
         }
     },[])
 
@@ -28,6 +32,10 @@ export default function Login(){
             <div className='row justify-content-center mt-5 '>
                 <div className='col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded'>
                     <h3 className='text-center'>Login</h3>
+
+                    {loading && (<Loading/>)}
+                    {error && (<Error error='Invalid credentials'/>)}
+
                     <div className='input'>
 
                         <input 
