@@ -26,7 +26,8 @@ const orderSchema = mongoose.Schema({
     isDelivered :
     {
         type : Boolean,
-        require
+        require,
+        default: false
     },
     transactionId :
     {
@@ -38,3 +39,5 @@ const orderSchema = mongoose.Schema({
 },{
     timestamps : true
 })
+
+module.exports = mongoose.model('orders', orderSchema)
