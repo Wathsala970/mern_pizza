@@ -30,7 +30,7 @@ export default function Navbar() {
                     {currentUser ? (
                         <>
                             <a className='nav-link m-2' href='/menu'>Menu</a>
-                            <a className='nav-link m-2' href='/login'>My Orders</a>
+                            <a className='nav-link m-2' href='/orders'>My Orders</a>
                             <a className='nav-link m-2' href='/cart'><BsCart /> {cartstate.cartItems.length}</a>
                             <li className='nav-link m-2'>{currentUser.name}</li>
                             <a className='nav-link m-2' href='/' onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></a>
