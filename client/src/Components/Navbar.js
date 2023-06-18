@@ -24,7 +24,7 @@ export default function Navbar() {
                 <a className="navbar-brand" href='/'>YUMMY PIZZA</a>
 
                 <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onclick={() => setMobile(false)}>
-                    <Link to='/'><li>Home</li></Link>
+                    {/* <Link to='/'><li>Home</li></Link> */}
 
 
                     {currentUser ? (
