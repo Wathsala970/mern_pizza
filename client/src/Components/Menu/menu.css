@@ -26,3 +26,8 @@
     box-shadow: none !important;
     border-color: black !important;
 }
+.row{
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
