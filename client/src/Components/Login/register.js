@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import {useDispatch, useSelecter} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {registerUser} from '../actions/userAction';
+import Error from '../error';
+import Loading from '../loading';
+import Success from '../success'
+
+
+
 export default function Registration() {
     const [name, setname] = useState('')
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
     const [cpassword, setcpassword] = useState('')
+    const registerState = useSelector(state => state.registerUserReducer)
+    const {error , loading, success} = registerState
 
     const dispatch = useDispatch()
     function register(){
@@ -27,7 +35,13 @@ export default function Registration() {
     return (
         <div>
             <div className='row justify-content-center mt-5'>
-                <div className='col-md-5 mt-5 text-left'>
+                <div className='col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded'>
+
+                    {loading && (<Loading/>)}
+                    {success && (<Success success='User Registered Successfully'/>)}
+                    {error && (<Error error = 'Email already registered'/>)}
+
+
                     <h3 className='text-center'>Register</h3>
                     <div className='input'>
                         <input 
@@ -66,6 +80,7 @@ export default function Registration() {
                         />
 
                         <button onClick={register} className='btn'>REGISTER</button>
+                        <h6 className='text'><a style={{color: 'black'}} href='/login'>Click Here To Login</a></h6>
                     </div>
                 </div>
             </div>
