@@ -8,9 +8,12 @@ app.use(express.json());
 
 const pizzasRoute = require('./server/routes/pizzaRaoutes')
 const userRoute = require('./server/routes/userRoutes')
+const orderRoute = require('./server/routes/orderRoutes')
 
 app.use('/api/pizzas/', pizzasRoute)
 app.use('/api/users/', userRoute)
+app.use('/api/orders/', orderRoute)
+
 
 app.get("/", (req,res)=>{
     res.send("server is working " + port);
