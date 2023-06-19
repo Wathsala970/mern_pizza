@@ -18,8 +18,7 @@ export default function Pizza({ pizza }) {
     }
 
     return (
-        <>
-            <div  className="shadow-lg p-3 mb-5 bg-white rounded ">
+        <div  className="shadow-lg p-3 mb-5 bg-white rounded">
             <div onClick={handleShow}>
             <h1 className="title">{pizza.name}</h1>
             <img src={pizza.image} className="img-fluid" />
@@ -66,9 +65,6 @@ export default function Pizza({ pizza }) {
                     
                 </Modal.Footer>
             </Modal>
-            
         </div>
-        </>
-        
     )
 }
