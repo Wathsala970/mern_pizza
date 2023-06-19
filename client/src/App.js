@@ -8,6 +8,7 @@ import Login from './Components/Login/login';
 import CartScreen from './Components/Cart/cart';
 import Registration from './Components/Login/register';
 import Order from './Components/Order/order';
+import Profile from './Components/Profile/profile';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/cart' element={<CartScreen/>} />
           <Route path='/register' element={<Registration/>}/>
           <Route path='/orders' element={<Order/>}/>
+          <Route path='/profile' element={<Profile/>}/>
         </Routes>
       </Router>
     </>
