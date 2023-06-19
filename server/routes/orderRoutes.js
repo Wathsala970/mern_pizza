@@ -51,7 +51,7 @@ router.post('/placeorder',async (req,res)=>{
     }
 });
 
-router.get('/getuserorders',async (req, res)=>{
+router.post('/getuserorders',async (req, res)=>{
     const {userid} = req.body
     try {
         const orders = await order.find({userid : userid})
