@@ -19,9 +19,9 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav className="navbar">
+            <nav className="navbar navbar-light bg-light">
 
-                <a className="navbar-brand" href='/'>YUMMY PIZZA</a>
+                <h3 className='mb-4' style={{color:'red' }}>YUMMY PIZZA</h3>
 
                 <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onclick={() => setMobile(false)}>
                     {/* <Link to='/'><li>Home</li></Link> */}
@@ -29,11 +29,11 @@ export default function Navbar() {
 
                     {currentUser ? (
                         <>
-                            <a className='nav-link m-2' href='/menu'>Menu</a>
-                            <a className='nav-link m-2' href='/orders'>My Orders</a>
-                            <a className='nav-link m-2' href='/cart'><BsCart /> {cartstate.cartItems.length}</a>
-                            <li className='nav-link m-2'>{currentUser.name}</li>
-                            <a className='nav-link m-2' href='/' onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></a>
+                            <h5><a className='nav-link m-3 ' href='/menu'>Menu</a></h5>
+                            <h5><a className='nav-link m-3' href='/orders'>My Orders</a></h5>
+                            <h5><a className='nav-link m-3' href='/cart'><BsCart /> {cartstate.cartItems.length}</a></h5>
+                            <h5><a className='nav-link m-3' href='/profile'>{currentUser.name}</a></h5>
+                            <h5><a className='nav-link m-3' href='/' onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></a></h5>
                         </>
                     ) : (
                         <li className='nav-link'>
