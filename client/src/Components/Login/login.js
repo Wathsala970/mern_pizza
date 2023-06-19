@@ -28,7 +28,7 @@ export default function Login(){
 
 
     return(
-        <div class="container">
+        <div classname="container" >
             <div className='row justify-content-center mt-5 '>
                 <div className='col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded'>
                     <h3 className='text-center'>Login</h3>
@@ -48,7 +48,7 @@ export default function Login(){
                         />
 
                         <input 
-                        type='text' 
+                        type='password' 
                         placeholder='password' 
                         className='form-control' 
                         value={password}
