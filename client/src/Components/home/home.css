@@ -80,11 +80,14 @@
 .right{
     flex: 1;
 }
-.manEatingImg{
+.manEating{
     height: 85%;
     width: 100%;
     object-fit: contain;
-    margin: 100px;
+    margin: 50px;
+    align-items: right;
+    justify-content: right;
+  
 }
 .deliveryInfos{
     display: flex;
