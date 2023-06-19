@@ -3,8 +3,8 @@ const router = express.Router();
 const User = require('../models/userModel')
 
 router.post('/register', (req, res)=>{
-    const {name, email, password} = req.body
-    const newUser = new User({name, email, password})
+    const {name, email, password, address, contactno} = req.body
+    const newUser = new User({name, email, password ,address, contactno})
 
     try {
         newUser.save()
@@ -25,6 +25,8 @@ router.post('/login', async(req,res)=>{
             const currentUser = {
                 name : user[0].name, 
                 email : user[0].email,
+                address : user[0].address,
+                contactno : user[0].contactno,
                 isAdmin : user[0].isAdmin,
                 _id : user[0]._id
             }
