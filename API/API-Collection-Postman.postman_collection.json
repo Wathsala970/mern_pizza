@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "dd0d2500-c34c-4c7c-9857-fddefe775cc2",
+		"name": "API-Collection-Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27947542"
+	},
+	"item": [
+		{
+			"name": "Get menu",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Post menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Cheesy Tomato with Green Chillies\",\r\n        \"varients\": [\r\n            \"Small\",\r\n            \"Medium\",\r\n            \"Large\"\r\n        ],\r\n        \"price\": [\r\n            {\r\n                \"Small\": 859,\r\n                \"Medium\": 1679,\r\n                \"Large\": 2999\r\n            }\r\n        ],\r\n        \"category\": \"CHEESE LAVA RANGE\",\r\n        \"image\": \"https://adminsc.pizzahut.lk//images/mainmenu/f913317b-dec5-4051-a529-facca04afd4f.jpg\",\r\n        \"description\": \"Rich tomato sauce base topped with cream cheese, onions, tomato, green chillies & Mozzarella.\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/menu"
+			},
+			"response": []
+		},
+		{
+			"name": "Post register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Chathuni\",\r\n    \"email\" : \"chathu@gmail.com\",\r\n    \"password\" : \"123456\",\r\n    \"address\": \"Mahanuwara\",\r\n    \"contactno\": \"0754862558\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Post login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"wathsala@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all pizzas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/pizzas/getallpizzas"
+			},
+			"response": []
+		},
+		{
+			"name": "Post placeorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": {\r\n    \"email\": \"wathsala@gmail.com\",\r\n    \"id\": \"64906d99c4b1fa6986ff10e2\"\r\n  },\r\n  \"subtotal\": 4766,\r\n  \"currentUser\": {\r\n    \"name\": \"Wathsala\",\r\n    \"email\": \"wathsala@.com\",\r\n    \"_id\": \"64906d99c4b1fa6986ff10e2\"\r\n  },\r\n  \"cartItems\": [\r\n    {\r\n      \"name\": \"PEPPER BARBECUE & ONION\",\r\n      \"price\": 2029\r\n    },\r\n    {\r\n      \"name\": \"Hot Chili Chicken\",\r\n      \"price\": 999\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/orders/placeorder"
+			},
+			"response": []
+		},
+		{
+			"name": "Post get user orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userid\": \"64906d99c4b1fa6986ff10e2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/orders/getuserorders"
+			},
+			"response": []
+		}
+	]
+}
