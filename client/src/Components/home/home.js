@@ -17,7 +17,7 @@ const Home = () => {
     const navigate = useNavigate();
   
     const handleOrderNowClick = () => {
-      navigate('/login'); // Replace '/login' with the actual path of your login page
+      navigate('/login'); 
     };
   return (
     <section>
