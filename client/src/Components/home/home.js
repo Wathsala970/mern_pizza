@@ -9,25 +9,32 @@ import order from '../../assessts/order.jpg'
 import { AiFillFacebook } from 'react-icons/ai'
 import { AiFillInstagram } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+
+    const navigate = useNavigate();
+  
+    const handleOrderNowClick = () => {
+      navigate('/login'); // Replace '/login' with the actual path of your login page
+    };
   return (
     <section>
       <section style={{ height: '80vh' }} id="home" className="container">
-        <div className="wrapper">
-          <div className="left">
+        <div className="flex-container">
+          <div className="text-left">
             <h2 className="tittle">Do you crave delicious food !</h2>
             <p className="firstmsg">But going out to take <span> food costs time....</span></p>
             <p className="secondmsg">Why not order<span> pizza</span> or something <br /><span>delicious</span>from our restaurant</p>
             <p className="desc">Our restaurant always puts the client above.
               They are our single most important thing for our business.</p>
-            <div className='btn'>
-              <button className='button'>Order Now!</button>
+            <div >
+              <button className='btn' onClick={handleOrderNowClick}>Order Now!</button>
             </div>
 
           </div>
-          <div className="right">
+          <div className="">
             <img src={manEating} alt="" className="manEating"></img>
           </div>
         </div>
