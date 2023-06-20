@@ -28,9 +28,9 @@ export default function Login(){
 
 
     return(
-        <div classname="container" >
-            <div className='row justify-content-center mt-5 '>
-                <div className='col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-white rounded'>
+        <div classname="container  "  >
+            <div className='row justify-content-center mt-5 ' >
+                <div className='col-md-5 mt-5 text-left shadow-lg p-3 mb-5 bg-info rounded'>
                     <h3 className='text-center'>Login</h3>
 
                     {loading && (<Loading/>)}
