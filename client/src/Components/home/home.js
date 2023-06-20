@@ -21,7 +21,7 @@ const Home = () => {
     };
   return (
     <section>
-      <section style={{ height: '80vh' }} id="home" className="container">
+      <section style={{ height: '70vh' }} id="home" className="container">
         <div className="flex-container">
           <div className="text-left">
             <h2 className="tittle">Do you crave delicious food !</h2>
@@ -39,7 +39,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section >
+      <section style={{ height: '70vh' }}>
         <div className='container'>
           <div className="wrapper">
             <div className="delivery">
@@ -78,7 +78,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="container">
         <div className='container1'>
           <div className="wrapper1">
             <div className='col'>
@@ -102,16 +102,16 @@ const Home = () => {
             <div className='col'>
               <h3 className='title1'>Social Media</h3>
               <ul className='list'>
-                <li><button className='socialmedia'>
-                  <AiFillFacebook /></button>
+                <li><a href='https://web.facebook.com/pizzahutsrilanka/?_rdc=1&_rdr'><button className='socialmedia' >
+                  <AiFillFacebook /></button></a>
                 </li>
-                <li><button className='socialmedia' >
+                <li><a href='https://www.instagram.com/pizzahutsl/?hl=en>'><button className='socialmedia' >
                   <AiFillInstagram />
-                </button>
+                </button></a>
                 </li>
-                <li><button className='socialmedia' >
+                <li><a href='https://twitter.com/pizzahutlanka?lang=en>'><button className='socialmedia' >
                   <BsTwitter />
-                </button>
+                </button></a>
                 </li>
               </ul>
             </div>
