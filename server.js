@@ -2,9 +2,11 @@ const express = require('express');
 const db = require('./server/db')
 const menuRoutes = require('./API/Menu/menu')
 const Pizza = require('./server/models/pizzaModel')
+const path = require("path")
 
 const app = express();
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "client/build")))
 
 const pizzasRoute = require('./server/routes/pizzaRaoutes')
 const userRoute = require('./server/routes/userRoutes')
