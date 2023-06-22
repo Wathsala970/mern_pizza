@@ -3,7 +3,7 @@ const db = require('./server/db')
 const menuRoutes = require('./API/Menu/menu')
 const Pizza = require('./server/models/pizzaModel')
 const path = require("path")
-const cors = require('cors');
+
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client/build")))
@@ -15,11 +15,9 @@ const orderRoute = require('./server/routes/orderRoutes')
 app.use('/api/pizzas/', pizzasRoute)
 app.use('/api/users/', userRoute)
 app.use('/api/orders/', orderRoute)
-app.use(cors());
 
 
 app.get("/", (req,res)=>{
-    res.setHeader("Access-Control-Allow-Origin", 'true')
     res.send("server is working " + port);
 });
 
