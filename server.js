@@ -5,7 +5,9 @@ const Pizza = require('./server/models/pizzaModel')
 const path = require("path")
 
 const app = express();
+const cors = require("cors")
 app.use(express.json());
+app.use(cors());
 app.use(express.static(path.join(__dirname, "client/build")))
 
 const pizzasRoute = require('./server/routes/pizzaRaoutes')
@@ -18,6 +20,7 @@ app.use('/api/orders/', orderRoute)
 
 
 app.get("/", (req,res)=>{
+    res.setHeader("Access-Control-Allow-Origin", 'true')
     res.send("server is working " + port);
 });
 
